@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>TOS-signalering</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <main class="content-wrapper">
+    <h1>TOS-signalering</h1>
+    <div class="content-container">
+      <div class="content">
+       
+        <div id="taalAdviesContainer">
+ 
+<div id="startScreen" class="step active">
+  <h2>Vragenlijst</h2>
+  <p>Valt de kleuter op aan de hand van signalen op de poster "Heeft Jos 'n TOS?"
+Vul dan de TOS-signalering in. Je hebt ook gegevens nodig van de leerkracht en de ouders van het kind. Na de eerste vraag krijg je te zien, welke vragenlijsten zij moeten invullen. Met de scores van de leerkracht en de ouders kan je de TOS-signalering verder invullen.
+</p> <p>De vragenlijst kan worden ingevuld voor kinderen van 4 tot en met 6 jaar.</p>
+  <button onclick="startVragenlijst()">Start de vragenlijst</button>
+  <img src="HeeftJosnTOS.webp" alt="Poster Heeft Jos 'n TOS?" class="poster-afbeelding" />
+  
+  
+</div>
+  <!-- Stap 1 -->
+  <div id="step1" class="step">
+    <h3>Welke is van toepassing op het kind?</h3>
+    <button onclick="next('1talig')">Eentalig</button>
+    <button onclick="next('simultaan')">Simultaan meertalig <i>(Kinderen die vanaf geboorte meerdere talen horen en gebruiken)</i></button>
+    <button onclick="next('successief')">Successief meertalig <i>(Kinderen die eerst één taal leren en pas na ongeveer 2,5 jaar intensief in aanraking komen met het Nederlands) </i></button>
+  </div>
+
+  <!-- Stap 2 -->
+  <div id="step2" class="step">
+    <h3> Wat is de Siméa-score?</h3>
+    <h3> <i>Laat de leerkracht de Siméa-vragenlijst invullen om te achterhalen wat de score is.</i></h3>
+     <i><a href="simea.html">Siméa vragenlijst </a></i>
+    <button onclick="nextSim(0)">0 keer "twijfel" of "onvoldoende"</button>
+    <button onclick="nextSim(1)">1 keer "twijfel" of "onvoldoende"</button>
+    <button onclick="nextSim(2)">2 keer "twijfel" of "onvoldoende"</button>
+    <div class="nav-buttons">
+      <button onclick="goBack('step2')">Terug</button>
+    </div>
+  </div>
+
+  <!-- Stap 3 -->
+  <div id="step3" class="step">
+    <h3>Wat is de leeftijd van het kind?</h3>
+    <button onclick="nextAge('3-4')">3;9 – 4;5 jaar</button>
+    <button onclick="nextAge('4-6')">4;6 – 5;11 jaar</button>
+    <div class="nav-buttons">
+      <button onclick="goBack('step3')">Terug</button>
+    </div>
+  </div>
+
+  <!-- Stap 4 -->
+  <div id="step4" class="step">
+    <h3>Wat is de ELS-score?</h3>
+    <h3> <i>Laat de ouders de ELS-vragenlijst invullen om te achterhalen wat de score is.</i></h3>
+    <i><a href="els.html"> ELS vragenlijst</a></i>
+    <label><input type="radio" name="els" value="ge24"> ≥ 24 (3;9–4;5 jaar)</label><br>
+    <label><input type="radio" name="els" value="lt24"> < 24 (3;9–4;5 jaar)</label><br>
+    <label><input type="radio" name="els" value="ge25"> ≥ 25 (4;6–5;11 jaar)</label><br>
+    <label><input type="radio" name="els" value="lt25"> < 25 (4;6–5;11 jaar)</label><br>
+    <button onclick="checkELS()">Volgende</button>
+    <div class="nav-buttons">
+      <button onclick="goBack('step4')">Terug</button>
+    </div>
+  </div>
+
+  <!-- Stap 5 -->
+  <div id="step5" class="step">
+    <h3>Wat is de ALDeQ-score?</h3>
+    <h3> <i>Laat de ouders de ALDeQ-NL-vragenlijst invullen om te achterhalen wat de score is.</i></h3>
+    <i><a href"https://www.taalbrug.be/materiaal/oudervragenlijst"> ALDeQ-NL vragenlijst</a></i>
+    <label><input type="radio" name="aldeq" value="gt71"> > 0.71</label><br>
+    <label><input type="radio" name="aldeq" value="btw64_71"> Tussen 0.64 – 0.71</label><br>
+    <label><input type="radio" name="aldeq" value="lt64"> < 0.64 </label><br>
+    <button onclick="checkALDeQ()">Toon advies</button>
+    <div class="nav-buttons">
+      <button onclick="goBack('step5')">Terug</button>
+    </div>
+  </div>
+
+  <!-- Advies -->
+  <div id="advies" class="step"></div>
+
+ 
+
+
+</div>
+        </div>
+      </div>
+    
+   
+    
+
+    
+    
+    <script src="script.js"></script>  
+  </main>
+
+  
+  
+</body>
+</html>
