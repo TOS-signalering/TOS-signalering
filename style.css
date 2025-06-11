@@ -33,7 +33,7 @@ html, body {
 }
 
 .content-wrapper {
-  min-height: calc(100vh - 60px);
+  width: 80%;
   padding: 20px;
 }
 
@@ -42,8 +42,7 @@ html, body {
 }
 
 .content-container {
-  max-width: 1200px;
-  width: 100%;
+    width: 80%;
   margin: 2px;
   padding: 20px;
   background-color: #fff;
@@ -58,10 +57,11 @@ html, body {
 .typeform-container {
   margin-top: 20px;
   min-height: 500px;
+  width: 80%;
 }
 
 .pdf-container {
-  max-width: 1200px;
+  width: 80%;
   width: 100%;
   margin: 2px;
   padding: 20px;
