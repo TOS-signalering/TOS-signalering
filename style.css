@@ -72,7 +72,7 @@ html, body {
 }
 
 .download-link {
-  display: inline-block;
+  display: block;
   padding: 10px 20px;
   background-color: #38AC9F;
   color: white;
