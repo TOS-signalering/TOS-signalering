@@ -6,9 +6,11 @@ html, body {
 }
 
 .navbar {
+    width:auto;
   background-color: #38AC9F;
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width:auto;
 }
 
 .nav-links {
